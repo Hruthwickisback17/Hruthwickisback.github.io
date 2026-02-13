@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V-AUTOMATE | Hruthwick T N</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+    <div class="logo">V-AUTOMATE</div>
+    
+    
+
+    <div class="menu-toggle" id="mobile-menu">
+        ☰
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+   <!-- HERO SECTION -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+    <div class="profile-container">
+        <img src="assets/profile.jpeg" alt="Hruthwick T N" class="profile-img">
+    </div>
+
+    <h1>V-AUTOMATE</h1>
+
+    <h2>by Hruthwick T N</h2>
+
+    <p class="subtitle">
+        1st Year B.E. CSE Student · Tech Enthusiast
+    </p>
+
+    <p class="manifesto">
+    Exploring technology through structured learning and real-world building.
+    </p>
+
+    <div class="buttons">
+        <a href="#contact" class="btn primary">Contact Me</a>
+        <a href="https://www.instagram.com/hruthwick17" target="_blank" class="btn secondary">Instagram</a>
+    </div>
+
+</div>
+
+</section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about fade-in" id="about">
+    <div class="about-container">
+
+        <div class="about-title">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-content">
+            <p>
+                I’m <strong>Hruthwick T N</strong>, a 1st Year B.E. Computer Science Engineering student at 
+                <strong>AIET, Mangalore</strong>.
+            </p>
+
+            <p>
+                I’m passionate about technology and constantly exploring how systems work — from web development 
+                to automation and problem solving.
+            </p>
+
+            <p>
+                Through <strong>V-AUTOMATE</strong>, I document my journey of building, learning, and evolving 
+                as a developer. My focus is not just on writing code, but on building structured, scalable, 
+                and meaningful projects.
+            </p>
+        </div>
+
+    </div>
+    </section>
+    <section class="skills fade-in">
+    <div class="skills-container">
+        <h2>Core Focus</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">Web Development</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">System Thinking</div>
+            <div class="skill-card">Automation Mindset</div>
+        </div>
+    </div>
+    </section>
+
+     
+
+    <!-- SOCIAL LINKS -->
+    <section class="socials fade-in">
+        <h2>Connect with Me</h2>
+       <div class="social-links">
+    <a href="https://www.instagram.com/hruthwick17?igsh=MWltazdudGhvanJtMg==" target="_blank">Instagram</a>
+    <a href="https://github.com/Hruthwickisback17" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/hruthwick-t-n-b3b844380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact fade-in" id="contact">
+        <h2>Let’s Connect</h2>
+        <p>Email me at:</p>
+        <a href="mailto:hruthwick701@gmail.com" class="email">
+            hruthwick701@gmail.com
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 V-AUTOMATE | Built by Hruthwick T N</p>
+    </footer>
+<script>
+const menu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    observer
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+</script>
+</body>
+</html>
